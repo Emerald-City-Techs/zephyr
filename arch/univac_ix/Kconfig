@@ -1,0 +1,19 @@
+# Target Location: zephyr/arch/univac_ix/Kconfig
+
+config ARCH_UNIVAC_IX
+	bool "Univac IX Sovereign Mainframe Architecture"
+	select ATOMIC_OPERATIONS_C
+	select ARCH_HAS_THREAD_LOCAL_STORAGE
+	help
+	  Enables native compilation for the Revolutionary Technology Company 
+	  Univac IX Mainframe platform. Implements 36-bit data words, 
+	  Kleene 3VL error handling matrices, and direct optoelectronic 
+	  signal tracking loops.
+
+config UNIVAC_IX_TRI_WORD_PRECISION
+	bool "Enable 180-Bit Extended Precision Tracking"
+	depends on ARCH_UNIVAC_IX
+	default y
+	help
+	  Combines three standard 60-bit memory words together to achieve 
+	  an absolute 36-decimal tracking precision for dense aerospace physics.
